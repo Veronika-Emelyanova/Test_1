@@ -37,7 +37,5 @@ class ContactController extends Controller {
         $contact->save();
 
         return response()->json(['success'=>'Form is successfully submitted!']);
-        //return view('contact_form', compact('contact'));
-
     }
 }
