@@ -60,7 +60,7 @@
 
 <div class="table-wrap">
         <div>
-            <table class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <table id="table" class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <thead>
             <tr>
                 <th>ФИО</th>
@@ -78,13 +78,6 @@
                     <td data-label="E-mail:">{{$contact->email}}</td>
                 </tr>
             @endforeach
-                <tr>
-                    <td id='element1' data-label="ФИО:"></td>
-                    <td id='element2' data-label="Адрес:"></td>
-                    <td id='element3' data-label="Телефон:"></td>
-                    <td id='element4' data-label="E-mail"></td>
-                </tr>
-
             </tbody>
 
         </table>
@@ -102,17 +95,16 @@
     $('#contactForm').on('submit',function(event){
         event.preventDefault();
 
-        // let table = document.createElement('table');
-        // let row = table.insertRow();
-        // let cell1 = row.insertCell(); // добавим ячейки
-        // let cell2 = row.insertCell();
-        // let cell3 = row.insertCell();
-        // let cell4 = row.insertCell();
-
         let name = $('#name').val();
         let address = $('#address').val();
         let mobile_number = $('#mobile_number').val();
         let email = $('#email').val();
+
+        let node1 = document.createElement('td');
+        let node2 = document.createElement('td');
+        let node3 = document.createElement('td');
+        let node4 = document.createElement('td');
+
 
         $.ajax({
             url: "/contact-form",
@@ -126,10 +118,18 @@
 
             },
             success:function(html){
-            $("#element1").html(name);
-            $("#element2").html(address);
-            $("#element3").html(mobile_number);
-            $("#element4").html(email);
+                let nodet = document.createElement('tr');
+                document.getElementById('table').appendChild(nodet);
+
+                node1.innerHTML = name;
+                node2.innerHTML = address;
+                node3.innerHTML = mobile_number;
+                node4.innerHTML = email;
+
+                nodet.appendChild(node1);
+                nodet.appendChild(node2);
+                nodet.appendChild(node3);
+                nodet.appendChild(node4);
 
             },
         });
@@ -142,8 +142,6 @@
         lazy: true,
     };
     const mask = IMask(element, maskOptions);
-
-
 
 </script>
 </body>
