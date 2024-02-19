@@ -1,0 +1,84 @@
+.post {
+    margin-bottom: 3em;
+    transition: .3s linear;
+
+}
+
+.post:hover {
+
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.border {
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+    linear-gradient(90deg, #ff0000 0%, #9b0f0f 100%);
+    border-radius: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+h1 {
+
+}
+
+.datetime {
+    text-align: right;
+    margin-right: 5em;
+}
+
+h2 {
+margin: 0.5em 2em;
+}
+@media(max-width: 581px) {
+
+    h2 {
+        margin: 0.5em 1em;
+    }
+    .datetime {
+        margin-right: 2em;
+    }
+}
+@media(max-width: 768px) {
+    .last_post {
+        width: 90% !important;
+    }
+}
+
+@media(max-width: 576px) {
+    .last_post {
+        width: 85% !important;
+    }
+}
+
+
+.btn, .btn1 {
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(113,7,7,1) 100%);
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    transition: .3s linear;
+}
+.btn1 {
+    background: linear-gradient(90deg, rgba(113,7,7,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+.btn:hover, .btn1:hover {
+    color: white;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: .3s;
+
+}
+
+
+
