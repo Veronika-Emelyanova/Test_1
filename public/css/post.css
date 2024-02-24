@@ -1,11 +1,9 @@
 .post {
     margin-bottom: 3em;
     transition: .3s linear;
-
 }
 
 .post:hover {
-
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
@@ -57,7 +55,6 @@ margin: 0.5em 2em;
         width: 85% !important;
     }
 }
-
 
 .btn, .btn1 {
     background: rgb(255,0,0);

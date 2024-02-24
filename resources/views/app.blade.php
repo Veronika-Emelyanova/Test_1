@@ -38,9 +38,6 @@
                             </p>
                         </div>
                 </div>
-
-
-
             @endforeach
         </div>
         <div class="text-center">
